@@ -5,9 +5,7 @@ import * as Comp from './computation.js'
 function App(props) {
   const [input, setInput] = useState("");
   const [operator, setOperator] = useState("");
-  const [naNCheck, setNaNCheck] = useState(""); 
-
-
+  
   function condition(input) {
 
     let nums = input;
@@ -22,22 +20,22 @@ function App(props) {
             case "+": 
               const add = Comp.addition(num1, num2);
               setInput(add);
-              setNaNCheck(add);
+              
               break;
             case "-":
               const subtract = Comp.subtract(num1, num2);
               setInput(subtract);
-              setNaNCheck(subtract);
+              
               break;
             case "*":
               const multiply = Comp.multiply(num1, num2);
               setInput(multiply);
-              setNaNCheck(multiply);
+             
               break;
             case "/":
               const divide = Comp.divide(num1, num2);
               setInput(divide);
-              setNaNCheck(divide);
+              
             break;
           }
       
@@ -50,37 +48,24 @@ function App(props) {
         const value = e.target.value;          
               
         if(value.includes("AC")) {
-          
-          console.log("Con1")
+           
           setInput("");
           
-        
-           }else if(value.includes('=')) {
-
-            console.log("Con2");
+          }else if(value.includes('=')) {
+   
               condition(input);
               
-              console.log(naNCheck)
-
-              }else if(value.includes("+")||value.includes("-")||value.includes("*")||value.includes("/") ) {
-                console.log("Con3")
+                }else if(value.includes("+")||value.includes("-")||value.includes("*")||value.includes("/") ) {
+                
                 setOperator(value);
                 setInput(input + value);
 
                 }else {
-                  console.log("Con4")
-                setInput(input + value)
+                   setInput(input + value)
               }
 
         }
-        let NaN = isNaN(naNCheck);
-        if (NaN = true) {
-
-          console.log("NaN")
-          
-        }
-    
-
+            
   return ( 
         <div className="App">
           
