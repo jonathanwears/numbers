@@ -3,22 +3,19 @@ body {
 }
 
 .App {
-  display:grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  padding-top: 1%;
-  padding-left: 25%;
-  padding-right: 25%;
-
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25px, 150px));
+  grid-template-rows: repeat(auto-fill, minmax(25px, 150px));
+  height: 50em;
+  grid-gap: 5px;
+ 
 }
 
 button {
-  height: 150px ;
-  font-size: 30px;
-  border-radius: 20px;
+  font-size: 2em;
+  transition: transform 5ms;
   border: 0px;
-  margin: 5px;
-  
+  border-radius: 5px;
 }
 
 button:hover {
@@ -30,9 +27,10 @@ p {
   grid-column: 2/4;
   text-align: center;
   background-color: #FFFFFF;
-  font-size: 30px;
-  height: 2em;
-  border-radius: 20px;
-  margin-top: 5px;
+  font-size: 2em;
+  border-radius: 5px;
+  
+  
+  
 }
-
+ 

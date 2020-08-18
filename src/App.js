@@ -69,7 +69,7 @@ function App(props) {
   return ( 
         <div className="App">
           
-          {[0,1,2,3,4,5,6,7,8,9,"+","-","*","/","=","AC"].map(i =>
+          {[1,2,3,4,5,6,7,8,9,0,"+","-","*","/","=","AC"].map(i =>
           
           <button 
           value= {i}
