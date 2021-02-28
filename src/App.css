@@ -13,7 +13,7 @@ body {
 .calculator {
 
 height: 80%;
-width: 80%;
+width: 70%;
 
   display: grid;
   /* grid-template-columns: ; */
@@ -26,14 +26,13 @@ width: 80%;
 
 button {
   font-size: 2em;
-  transition: transform 5ms;
   border: 0px;
   border-radius: 5px;
 }
 
 button:hover {
-  transition-duration: 100ms;
-  transform: scale(1.1);
+  transition-duration: 110ms;
+  transform: scale(1.05);
 }
 
 .display {

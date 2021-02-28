@@ -1,17 +1,25 @@
 import React from "react";
 
-function keyboardButtons(props) {
+function KeyboardButtons(props) {
+
+	function passClick(event) {
+		const number = event.target.value;
+		const isNumber = props.isNumber;
+		const newValue = {
+			value: number,
+			isNumber: isNumber
+		}
+		props.onClick(newValue)
+	}
 
 	return (
 		<button
-			key={props.number}
-			value={props.number}
-			onClick={props.passFn}
+			value={props.value}
+			onClick={passClick}
 		>
-			{props.number}
+			{props.value}
 		</button>
 	)
-
 };
 
-export default keyboardButtons;
+export default KeyboardButtons;
